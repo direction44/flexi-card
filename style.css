@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+* {
+	box-sizing: border-box;
+	font-family: "Madimi One", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    background: linear-gradient(to top,#fff1eb 0%,#ace0f9 100%);
+    height: 100vh;
+}
+#One{
+    background-image: url(./images/spiderman.jpg);
+}
+#Two{
+    background-image: url(./images/wolverine.webp);
+}
+#Three{
+    background-image: url(./images/thanos.jpg);
+}
+#Four{
+    background-image: url(./images/ironman.webp);
+}
+#Five{
+    background-image: url(./images/hulk.webp);
+}
+
+.heading{
+    background-color: rgb(211, 191, 37,0.165);
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+.title{
+    font-size: 29px;
+    color: #fff;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    overflow: hidden;
+}
+.card-container{
+    display: flex;
+    width: 90vw;
+}
+.frame
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 700ms ease-in;
+}
+.frame h2{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.focused{
+    flex:5;
+}
+
+.focused h2{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px){
+    .card-container{
+width: 100vw;
+    }
+    .frame:nth-of-type(4),.frame:nth-of-type(5)
+    {
+        display: none;
+    }
+}
